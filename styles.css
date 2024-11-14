@@ -1,0 +1,142 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navbar styling */
+.Navbar {
+    width: 100%;
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for the Todo input and list */
+.container {
+    margin-top: 50px;
+    width: 400px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Input field and Add button styling */
+#input {
+    width: 75%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+#delete_all {
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #dc3545; /* Red color for delete */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+    position: relative;
+}
+
+#delete_all:hover {
+    background-color: #b02a37;
+}
+
+#add_todo {
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+#add_todo:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for each todo item */
+#js_text p {
+    font-size: 16px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    margin: 0;
+    position: relative;
+    padding-right: 150px; /* Space for buttons */
+}
+
+/* Fixed position container for buttons */
+.todo-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Positioning each button absolutely within the todo item */
+button {
+    font-size: 14px;
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: absolute;
+    right: 10px; /* Start from the right */
+}
+
+/* Specific button colors and positions */
+button[onClick*="DeleteTodo"] {
+    background-color: #dc3545;
+    width: 60px;
+    right: 10px;
+}
+
+button[onClick*="DeleteTodo"]:hover {
+    background-color: #c82333;
+}
+
+button[onClick*="EditTodo"] {
+    background-color: #28a745;
+    width: 60px;
+    right: 80px; /* Space from Delete button */
+}
+
+button[onClick*="EditTodo"]:hover {
+    background-color: #218838;
+}
+
+button[onClick*="CopyTodo"] {
+    background-color: #007bff;
+    width: 60px;
+    right: 150px; /* Space from Edit button */
+}
+
+button[onClick*="CopyTodo"]:hover {
+    background-color: #0056b3;
+}
